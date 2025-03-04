@@ -14,8 +14,6 @@
 - [Project Execution and Results](#project-execution-and-results)
 - [Conclusion](#conclusion)
 - [Installation & Setup](#installation--setup)
-- [Usage](#usage)
-
 
 ## Introduction
 
