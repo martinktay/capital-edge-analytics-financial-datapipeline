@@ -15,7 +15,7 @@
 - [Conclusion](#conclusion)
 - [Installation & Setup](#installation--setup)
 - [Usage](#usage)
-- [License](#license)
+
 
 ## Introduction
 
