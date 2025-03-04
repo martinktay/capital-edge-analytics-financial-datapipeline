@@ -104,6 +104,8 @@ Install dependencies via pip:
 ```bash
 pip install -r requirements.txt
 
+pip install --upgrade requests pandas pyspark
+
 
 
 
