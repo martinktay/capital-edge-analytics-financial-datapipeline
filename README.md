@@ -102,33 +102,8 @@ The Capital Edge Analytics project demonstrates a comprehensive solution for man
 Install dependencies via pip:
 
 ```bash
-pip install requests pandas pyspark
-
-### Extract Data
-from config import STOCK_CONFIG
-from extract import extract_stock_data
-
-stock_data = extract_stock_data(STOCK_CONFIG)
-
-### Transform Data
-from transform import parse_time_series_data
-
-# Assuming a set of existing dates from previously stored data
-new_data = []
-for symbol, time_series in stock_data.items():
-    new_data.extend(parse_time_series_data(time_series, symbol, existing_dates))
+pip install -r requirements.txt
 
 
-### Load Data
-
-from load import load_combined_csv, save_combined_csv
-import pandas as pd
-
-file_path = "abfss://bronze@capitaledgestorage01.dfs.core.windows.net/combined.csv"
-combined_data = load_combined_csv(file_path)
-new_df = pd.DataFrame(new_data)
-updated_data = pd.concat([combined_data, new_df]).drop_duplicates(subset=["Date", "Symbol"])
-
-save_combined_csv(updated_data, file_path)
 
 
